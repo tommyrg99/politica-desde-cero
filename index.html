@@ -403,7 +403,7 @@
     color: #FFFFFF;
   }
 
-  .contact-title em { font-style: normal; color: var(--accent); }
+  .contact-title em { font-style: normal; color: #D1FF00; }
 
   /* the letter */
   .letter {
@@ -418,6 +418,7 @@
   .letter-line { margin-bottom: 0.5rem; }
 
   .letter .muted { color: rgba(255,255,255,0.5); }
+  .letter .intro-line { color: #FFFFFF; }
 
   /* fill-in-blank input */
   .fill-input,
@@ -425,7 +426,7 @@
     background: transparent;
     border: none;
     border-bottom: 2px dashed rgba(255,255,255,0.35);
-    color: var(--accent);
+    color: #D1FF00;
     font-family: inherit;
     font-size: inherit;
     font-weight: 600;
@@ -449,21 +450,21 @@
   .fill-select:focus,
   .fill-input:hover,
   .fill-select:hover {
-    border-bottom-color: var(--accent);
+    border-bottom-color: #D1FF00;
     border-bottom-style: solid;
-    background: rgba(255, 61, 20, 0.12);
+    background: rgba(209, 255, 0, 0.12);
   }
 
   .fill-input.filled,
   .fill-select.filled {
-    border-bottom-color: var(--accent);
+    border-bottom-color: #D1FF00;
     border-bottom-style: solid;
   }
 
   .fill-select {
     cursor: pointer;
     padding-right: 1.5em;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3e%3cpath d='M1 1L6 6L11 1' stroke='%23FF3D14' stroke-width='2'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3e%3cpath d='M1 1L6 6L11 1' stroke='%23D1FF00' stroke-width='2'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 0.3em center;
   }
@@ -502,7 +503,7 @@
     transition: border-color 0.2s ease;
   }
   .letter-note textarea::placeholder { color: rgba(255,255,255,0.35); }
-  .letter-note textarea:focus { border-color: var(--accent); }
+  .letter-note textarea:focus { border-color: #D1FF00; }
 
   .letter-submit {
     margin-top: 3rem;
@@ -526,8 +527,8 @@
     text-transform: uppercase;
     font-size: 1.25rem;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
-    background: #25D366;
+    color: #000000;
+    background: #D1FF00;
     border: none;
     padding: 1.25rem 2.25rem;
     cursor: pointer;
@@ -541,7 +542,7 @@
 
   .btn-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 8px 24px rgba(209, 255, 0, 0.4);
   }
 
   .btn-submit:disabled {
@@ -618,9 +619,7 @@
     }
     .service-row.active { padding: 2rem 0 2.25rem; }
     .service-title {
-      font-size: clamp(1.6rem, 8vw, 2.1rem);
-      overflow-wrap: break-word;
-      word-break: break-word;
+      font-size: clamp(1.3rem, 7vw, 1.7rem);
     }
     .service-emoji { font-size: 1.1rem; }
     .service-arrow { font-size: 1.4rem; }
@@ -805,7 +804,7 @@
 
   <form class="letter" id="letterForm" novalidate>
 
-    <p class="letter-line"><span class="muted">Hola Política Desde Cero,</span></p>
+    <p class="letter-line"><span class="intro-line">Hola @politicadesdezero,</span></p>
 
     <p class="letter-line">
       soy
@@ -934,7 +933,7 @@
     }
 
     const message =
-`Hola Política Desde Cero,
+`Hola @politicadesdezero,
 
 Soy ${name}, me postulo a ${role}, y estoy en ${stage}.
 Necesito ayuda con: ${service}.
