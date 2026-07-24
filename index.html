@@ -78,68 +78,13 @@
     position: relative;
   }
 
-  .hero-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-  }
-
-  .hero-brand {
-    font-family: var(--f-mono);
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: var(--ink);
-  }
-
-  .hero-brand .dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.85); }
-  }
-
-  .hero-nav {
-    font-family: var(--f-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-  }
-
-  .hero-nav a {
-    color: var(--ink-muted);
-    text-decoration: none;
-    margin-left: 2rem;
-    transition: color 0.2s ease;
-  }
-
-  .hero-nav a:hover { color: var(--accent); }
-
   .hero-center {
-    padding: 5rem 0 2rem;
+    padding: 2rem 0 2rem;
   }
 
   .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 3rem;
-    align-items: end;
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--line);
-  }
-
-  .hero-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
   }
 
   .hero-title {
@@ -151,7 +96,11 @@
     margin-top: 0;
   }
 
-  .hero-title .nowrap,
+  .hero-title .line {
+    display: block;
+    white-space: nowrap;
+  }
+
   .contact-title .nowrap { white-space: nowrap; }
 
   .hero-title .accent {
@@ -171,15 +120,6 @@
     background: var(--accent);
     transform: translateY(-50%);
   }
-
-  .hero-sub {
-    font-size: 1rem;
-    max-width: 32ch;
-    color: var(--ink-muted);
-    line-height: 1.4;
-  }
-
-  .hero-sub strong { color: var(--ink); font-weight: 500; }
 
   .hero-bottom {
     display: flex;
@@ -634,18 +574,11 @@
   ========================================== */
   @media (max-width: 768px) {
     .hero { padding: 1.25rem; }
-    .hero-nav a { margin-left: 1rem; }
     .hero-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
       padding-bottom: 2.5rem;
     }
 
-    .hero-title { font-size: clamp(2rem, 9vw, 3.25rem); }
-    .hero-title .nowrap,
-    .contact-title .nowrap { white-space: normal; }
-
-    .hero-sub { font-size: 0.95rem; }
+    .hero-title { font-size: clamp(1.2rem, 7vw, 1.8rem); }
 
     .services { padding: 5rem 1.25rem 4rem; }
     .services-header,
@@ -688,23 +621,11 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
 
-  <div class="hero-top">
-    <div class="hero-brand"><span class="dot"></span>POLÍTICA DESDE CERO</div>
-    <nav class="hero-nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-
   <div class="hero-center">
     <div class="hero-grid">
-      <div class="hero-meta">
-        <div class="eyebrow">[ SERVICIOS / 2026 ]</div>
-        <p class="hero-sub">cómo comunicar sin ser igual</p>
-      </div>
       <h1 class="hero-title">
-        Lo que hacemos<br>
-        <span class="nowrap">de <span class="accent">principio a fin.</span></span>
+        <span class="line">Lo que hacemos</span>
+        <span class="line">de <span class="accent">principio a fin.</span></span>
       </h1>
     </div>
   </div>
