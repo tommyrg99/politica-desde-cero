@@ -677,7 +677,7 @@
       </div>
       <div class="service-content">
         <h3 class="service-title">Consulting</h3>
-        <p class="service-desc">Cuando el candidato busca guía, no ejecución. Pensamos contigo el rumbo político y comunicacional.</p>
+        <p class="service-desc">Cuando la candidatura busca guía, no ejecución. Pensamos contigo el rumbo político y comunicacional.</p>
         <ul class="service-items">
           <li>
             <span class="item-index">→ 01</span>
@@ -839,11 +839,6 @@
       </select>.
     </p>
 
-    <p class="letter-line">
-      Escríbeme al WhatsApp
-      <input class="fill-input" id="fPhone" type="tel" placeholder="+593 …" size="14" required />.
-    </p>
-
     <div class="letter-note">
       <label for="fNote">P.D. (opcional) — cuéntanos más</label>
       <textarea id="fNote" placeholder="Contexto, timing, presupuesto tentativo, lo que quieras..."></textarea>
@@ -867,9 +862,10 @@
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
 <div class="footer-inner">
-  <div>© 2026 POLÍTICA DESDE CERO</div>
+  <div>© 2026 POLÍTICA DESDE 0.</div>
   <div>
     <a href="https://wa.me/593998283968" target="_blank">WhatsApp</a> ·
+    <a href="https://www.instagram.com/politicadesdezero" target="_blank">Instagram</a> ·
     <a href="#servicios">Servicios</a> ·
     <a href="#contacto">Contacto</a>
   </div>
@@ -924,10 +920,9 @@
     const role    = document.getElementById('fRole').value.trim();
     const stage   = document.getElementById('fStage').value;
     const service = document.getElementById('fService').value;
-    const phone   = document.getElementById('fPhone').value.trim();
     const note    = document.getElementById('fNote').value.trim();
 
-    if (!name || !role || !stage || !service || !phone) {
+    if (!name || !role || !stage || !service) {
       errorEl.textContent = 'Faltan datos. Completa los espacios en blanco.';
       return;
     }
@@ -936,8 +931,7 @@
 `Hola @politicadesdezero,
 
 Soy ${name}, me postulo a ${role}, y estoy en ${stage}.
-Necesito ayuda con: ${service}.
-Escríbeme al WhatsApp: ${phone}.${note ? '\n\nP.D.: ' + note : ''}`;
+Necesito ayuda con: ${service}.${note ? '\n\nP.D.: ' + note : ''}`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
