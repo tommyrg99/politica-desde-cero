@@ -157,9 +157,17 @@
      SERVICIOS
   ========================================== */
   .services {
-    padding: 4rem 2rem 6rem;
+    background: #0A0A0A;
+    padding: 4rem 0 6rem;
+    --ink: #FFFFFF;
+    --ink-muted: rgba(255,255,255,0.55);
+    --line: rgba(255,255,255,0.15);
+  }
+
+  .services-inner {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 2rem;
   }
 
   .services-header {
@@ -604,7 +612,8 @@
     .hero-title .line { white-space: normal; }
     .hero-title .hero-emojis { font-size: 0.55em; white-space: nowrap; }
 
-    .services { padding: 3rem 1.25rem 2.5rem; }
+    .services { padding: 3rem 0 2.5rem; }
+    .services-inner { padding: 0 1.25rem; }
     .services-header,
     .contact-header {
       grid-template-columns: 1fr;
@@ -666,6 +675,7 @@
 
 <!-- ================= SERVICIOS ================= -->
 <section class="services" id="servicios">
+<div class="services-inner">
 
   <div class="services-list" id="serviceList">
 
@@ -791,6 +801,7 @@
 
   </div>
 
+</div>
 </section>
 
 <!-- ================= CONTACTO ================= -->
